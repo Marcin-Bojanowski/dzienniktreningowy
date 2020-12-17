@@ -28,25 +28,4 @@ public class WebAppConfig implements WebMvcConfigurer {
         return new ModelMapper();
     }
 
-    //    @InitBinder
-//    public void initBinder(WebDataBinder webDataBinder) {
-//        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-//        dateFormat.setLenient(false);
-//        webDataBinder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, true));
-//    }
-//    @Override
-//    public void addFormatters(FormatterRegistry registry) {
-//        registry.addConverter(getLocalDateSerializeConverter());
-//    }
-//
-//    @Bean
-//    public LocalDateSerializeConverter getLocalDateSerializeConverter() {
-//        return new LocalDateSerializeConverter();
-//    }
-//    @Override
-//    public void addFormatters(FormatterRegistry registry) {
-//        super.addFormatters(registry);
-//        registry.addFormatterForFieldType(LocalDate.class, new Formatter<LocalDate>() {
-//            //override parse() and print()
-//        });
 }
