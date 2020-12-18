@@ -1,1 +1,0 @@
-web: java -jar target/dzienniktreningowy-1.0.jar
