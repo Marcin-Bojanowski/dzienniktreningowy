@@ -25,8 +25,10 @@ public class User {
     private String username;
     private String email;
     private String password;
-    @ManyToMany(fetch = FetchType.EAGER)
-    private Set<Role> roles=new HashSet<>();
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"))
+    @Column(name = "role_name")
+    private Set<String> roles=new HashSet<>();
     @OneToMany
     private List<UserTrainingProgram> userTrainingPrograms=new ArrayList<>();
 }

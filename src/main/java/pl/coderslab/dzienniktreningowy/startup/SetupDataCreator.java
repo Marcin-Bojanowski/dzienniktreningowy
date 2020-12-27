@@ -3,11 +3,11 @@ package pl.coderslab.dzienniktreningowy.startup;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
-import org.springframework.context.annotation.ComponentScan;
+
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import pl.coderslab.dzienniktreningowy.entities.User;
-import pl.coderslab.dzienniktreningowy.services.RoleService;
+
 import pl.coderslab.dzienniktreningowy.services.UserService;
 
 @Component
@@ -16,7 +16,7 @@ public class SetupDataCreator implements ApplicationRunner {
 
     private final PasswordEncoder passwordEncoder;
     private final UserService userService;
-    private final RoleService roleService;
+
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
@@ -33,7 +33,7 @@ public class SetupDataCreator implements ApplicationRunner {
             user.setUsername(username);
             user.setPassword(passwordEncoder.encode(password));
             user.setEmail(email);
-            user.getRoles().add(roleService.getRoleByName(role));
+            user.getRoles().add(role);
             userService.save(user);
         }
     }
