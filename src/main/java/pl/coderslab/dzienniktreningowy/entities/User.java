@@ -3,7 +3,7 @@ package pl.coderslab.dzienniktreningowy.entities;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import pl.coderslab.dzienniktreningowy.entities.superClasses.TrainingProgram;
+
 
 import javax.persistence.*;
 import java.util.ArrayList;

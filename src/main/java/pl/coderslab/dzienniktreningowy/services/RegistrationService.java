@@ -1,16 +1,13 @@
 package pl.coderslab.dzienniktreningowy.services;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import pl.coderslab.dzienniktreningowy.dtos.UserDTO;
 import pl.coderslab.dzienniktreningowy.entities.Role;
 import pl.coderslab.dzienniktreningowy.entities.User;
-import pl.coderslab.dzienniktreningowy.repositories.RoleRepository;
-import pl.coderslab.dzienniktreningowy.repositories.UserRepository;
+
 import pl.coderslab.dzienniktreningowy.validation.groups.Registration;
 
 import javax.transaction.Transactional;
