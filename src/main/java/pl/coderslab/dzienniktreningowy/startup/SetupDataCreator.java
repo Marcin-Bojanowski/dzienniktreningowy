@@ -18,23 +18,23 @@ public class SetupDataCreator implements ApplicationRunner {
     private final UserService userService;
 
 
-    @Override
-    public void run(ApplicationArguments args) throws Exception {
-        createMainUsers();
-    }
-
-    private void createMainUsers() {
-        createUserIfNotExists("admin", "admin", "admin@gmail.com", "ROLE_ADMIN");
-    }
-
-    public void createUserIfNotExists(String username, String password, String email, String role) {
-        if (userService.findByUsername(username) == null) {
-            User user = new User();
-            user.setUsername(username);
-            user.setPassword(passwordEncoder.encode(password));
-            user.setEmail(email);
-            user.getRoles().add(role);
-            userService.save(user);
-        }
-    }
+//
+@Override
+public void run(ApplicationArguments args) throws Exception {
+//    createMainUsers();
+}
+//    private void createMainUsers() {
+//        createUserIfNotExists("admin", "admin", "admin@gmail.com", "ROLE_ADMIN");
+//    }
+//
+//    public void createUserIfNotExists(String username, String password, String email, String role) {
+//        if (userService.findByUsername(username) == null) {
+//            User user = new User();
+//            user.setUsername(username);
+//            user.setPassword(passwordEncoder.encode(password));
+//            user.setEmail(email);
+//            user.getRoles().add(role);
+//            userService.save(user);
+//        }
+//    }
 }
