@@ -75,6 +75,7 @@ private final DefaultExerciseService defaultExerciseService;
             defaultExercise.setName(name);
             defaultExercise.setMuscleGroup(muscleGroup);
             defaultExercise.setDescription(description);
+            defaultExerciseService.save(defaultExercise);
         }
     }
 }

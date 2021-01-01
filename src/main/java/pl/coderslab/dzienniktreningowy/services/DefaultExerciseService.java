@@ -32,7 +32,10 @@ public class DefaultExerciseService {
         defaultExerciseRepository.save(defaultExercise);
 
     }
+    public void save(DefaultExercise defaultExercise) {
+        defaultExerciseRepository.save(defaultExercise);
 
+    }
     public DefaultExercise findByName(String name){
         return defaultExerciseRepository.getByName(name);
     }
