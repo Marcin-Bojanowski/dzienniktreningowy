@@ -19,10 +19,18 @@ public class MuscleGroupService {
     private final ModelMapper modelMapper;
 
     public List<MuscleGroupDTO> getAllMuscleGroupDTOS(){
-        return muscleGroupRepository.getAll().stream().map(m->modelMapper.map(m,MuscleGroupDTO.class)).collect(Collectors.toList());
+        return muscleGroupRepository.findAll().stream().map(m->modelMapper.map(m,MuscleGroupDTO.class)).collect(Collectors.toList());
     }
 
     public List<MuscleGroup> getAllMuscleGroups() {
-        return muscleGroupRepository.getAll();
+        return muscleGroupRepository.findAll();
+    }
+
+    public MuscleGroup findByName(String name){
+        return muscleGroupRepository.findMuscleGroupByName(name);
+    }
+
+    public void save(MuscleGroup muscleGroup){
+        muscleGroupRepository.save(muscleGroup);
     }
 }

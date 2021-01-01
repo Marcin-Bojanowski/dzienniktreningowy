@@ -12,6 +12,7 @@ import java.util.List;
 @Transactional
 public interface MuscleGroupRepository extends JpaRepository<MuscleGroup, Long> {
 
-    @Query("select m from MuscleGroup m")
-    List<MuscleGroup> getAll();
+
+
+    MuscleGroup findMuscleGroupByName(String name);
 }

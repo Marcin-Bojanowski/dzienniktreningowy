@@ -20,16 +20,20 @@ public class DefaultExerciseService {
     private final ModelMapper modelMapper;
 
     public List<DefaultExerciseDTO> getAllDefaultExercisesDTO() {
-        return defaultExerciseRepository.getAll().stream().map(d -> modelMapper.map(d, DefaultExerciseDTO.class)).collect(Collectors.toList());
+        return defaultExerciseRepository.findAll().stream().map(d -> modelMapper.map(d, DefaultExerciseDTO.class)).collect(Collectors.toList());
     }
 
     public DefaultExercise getById(Long id){
-        return defaultExerciseRepository.getById(id);
+        return defaultExerciseRepository.getOne(id);
     }
 
     public void save(NewDefaultExerciseDTO newDefaultExerciseDTO) {
         DefaultExercise defaultExercise=modelMapper.map(newDefaultExerciseDTO, DefaultExercise.class);
         defaultExerciseRepository.save(defaultExercise);
 
+    }
+
+    public DefaultExercise findByName(String name){
+        return defaultExerciseRepository.getByName(name);
     }
 }

@@ -11,8 +11,7 @@ import java.util.List;
 @Repository
 @Transactional
 public interface DefaultExerciseRepository extends JpaRepository<DefaultExercise, Long> {
-    @Query("select d from DefaultExercise d")
-    List<DefaultExercise> getAll();
 
-    DefaultExercise getById(Long id);
+
+    DefaultExercise getByName(String name);
 }
