@@ -61,7 +61,7 @@ private final DefaultExerciseService defaultExerciseService;
     }
 
     public void createMuscleGroupIfNotExists(String name) {
-        if (muscleGroupService.findByName(name) != null) {
+        if (muscleGroupService.findByName(name) == null) {
             MuscleGroup muscleGroup = new MuscleGroup();
             muscleGroup.setName(name);
             muscleGroupService.save(muscleGroup);
@@ -69,7 +69,7 @@ private final DefaultExerciseService defaultExerciseService;
     }
 
     public void createDefaultExerciseIfNotExist(String name,String muscleGroupName, String description){
-        if (defaultExerciseService.findByName(name)!=null){
+        if (defaultExerciseService.findByName(name)==null){
             MuscleGroup muscleGroup=muscleGroupService.findByName(muscleGroupName);
             DefaultExercise defaultExercise=new DefaultExercise();
             defaultExercise.setName(name);
