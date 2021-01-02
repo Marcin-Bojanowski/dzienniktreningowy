@@ -22,7 +22,8 @@ public class TrainingSessionService {
 
     public TrainingSession save(NewTrainingSessionDTO newTrainingSessionDTO) {
         UserTrainingProgram userTrainingProgram=userTrainingProgramService.findById(newTrainingSessionDTO.getTrainingProgramId());
-        TrainingSession trainingSession = modelMapper.map(newTrainingSessionDTO, TrainingSession.class);
+        TrainingSession trainingSession = new TrainingSession();
+        trainingSession.setName(newTrainingSessionDTO.getName());
         TrainingSession save=trainingSessionRepository.save(trainingSession);
         userTrainingProgramService.addTrainingSession(save,userTrainingProgram);
 
