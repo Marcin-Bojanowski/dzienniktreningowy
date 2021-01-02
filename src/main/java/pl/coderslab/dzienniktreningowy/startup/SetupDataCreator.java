@@ -36,7 +36,7 @@ private final DefaultExerciseService defaultExerciseService;
     }
 
     private void createMuscleGroups() {
-        createMuscleGroupIfNotExists("chest");
+        createMuscleGroupIfNotExists("Chest");
         createMuscleGroupIfNotExists("Core");
         createMuscleGroupIfNotExists("Arms");
         createMuscleGroupIfNotExists("Back");
@@ -47,6 +47,27 @@ private final DefaultExerciseService defaultExerciseService;
 
     private void createDefaultExercises(){
         createDefaultExerciseIfNotExist("Bench press","Chest","Bench press");
+        createDefaultExerciseIfNotExist("Incline bench press","Chest","Incline bench press");
+        createDefaultExerciseIfNotExist("Dumbbell bench press","Chest","Dumbbell bench press");
+        createDefaultExerciseIfNotExist("Poliquin flys","Chest","Poliquin flys");
+        createDefaultExerciseIfNotExist("Ab wheel","Core","Ab wheel");
+        createDefaultExerciseIfNotExist("Plank","Core","Plank");
+        createDefaultExerciseIfNotExist("Tate press","Arms","Tate press");
+        createDefaultExerciseIfNotExist("Skull crushers","Arms","Skull crushers");
+        createDefaultExerciseIfNotExist("Incline dumbbell curl","Arms","Incline dumbbell curl");
+        createDefaultExerciseIfNotExist("Hummer curl","Arms","Hummer curl");
+        createDefaultExerciseIfNotExist("Row","Back","Row");
+        createDefaultExerciseIfNotExist("Deadlift","Back","Deadlift");
+        createDefaultExerciseIfNotExist("Pull up","Back","Pull up");
+        createDefaultExerciseIfNotExist("Lat pulldown","Back","Lat pulldown");
+        createDefaultExerciseIfNotExist("Squat","Legs","Squat");
+        createDefaultExerciseIfNotExist("Lying leg curl","Legs","Lying leg curl");
+        createDefaultExerciseIfNotExist("Romanian deadlift","Legs","Romanian deadlift");
+        createDefaultExerciseIfNotExist("Bulgarian split squat","Legs","Bulgarian split squat");
+        createDefaultExerciseIfNotExist("External rotation","Shoulders","External rotation");
+        createDefaultExerciseIfNotExist("Powell raise","Shoulders","Powell raise");
+        createDefaultExerciseIfNotExist("OHP","Shoulders","OHP");
+        createDefaultExerciseIfNotExist("Dumbbell lateral raise","Shoulders","Dumbbell lateral raise");
     }
 
     public void createUserIfNotExists(String username, String password, String email, String role) {
