@@ -23,7 +23,7 @@
              <c:out value="${trainingProgramDTO.name}"/>
             </h1>
             <h2 class="subtitle">
-                Rozpoczącie: <c:out value="${trainingProgramDTO.start}"/><br>
+                Rozpoczęcie: <c:out value="${trainingProgramDTO.start}"/><br>
                 Zakończenie: <c:out value="${trainingProgramDTO.end}"/>
             </h2>
             <h3 class="subtitle ">
